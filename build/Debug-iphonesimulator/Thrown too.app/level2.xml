@@ -1,0 +1,17 @@
+<thrown map="level 2" author="orta" throws="1">
+
+  <!-- important details -->
+  <background file="default"/>
+  <player x="40" y="233"/> 
+  <exit x="240" y="0" width="40" height="2"/>
+  <size width="480" height="320"/>
+  <next level="level3"/>
+
+  <!-- actual map -->
+  <line x1="0" y1="100" x2="80" y2="100"/>
+  <line x1="80" y1="100" x2="240" y2="40"/>
+  <line x1="240" y1="40" x2="240" y2="0"/>
+  <line x1="280" y1="0" x2="280" y2="40"/>
+  <line x1="280" y1="40" x2="400" y2="100"/>
+  <line x1="400" y1="100" x2="480" y2="100"/>
+</thrown>

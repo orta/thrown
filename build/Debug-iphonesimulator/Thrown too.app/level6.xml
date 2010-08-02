@@ -1,0 +1,25 @@
+<thrown map="level 6" author="orta" throws="1">
+
+  <!-- important details -->
+  <background file="default"/>
+  <player x="140" y="270"/> 
+  <exit x="220" y="40" width="120" height="2"/>
+  <size width="480" height="320"/>
+  <next level="level1"/>
+
+  <!-- actual map -->
+  <line x1="0" y1="250" x2="150" y2="250"/>
+  <line x1="150" y1="250" x2="150" y2="0"/>
+  
+  <!-- cliff -->
+  <line x1="361" y1="200" x2="410" y2="360"/>
+
+  <!-- spikes -->
+  <spikes direction="up" x="150" y="0" width="50" height="5"/>
+  <spikes direction="right" x="201" y="0" width="10" height="200"/>
+  <spikes direction="left" x="350" y="0" width="10" height="200"/>
+  <line x1="200" y1="0" x2="200" y2="200"/>
+  <line x1="361" y1="0" x2="361" y2="200"/>
+
+
+</thrown>
