@@ -9,17 +9,17 @@
 /* Begin PBXBuildFile section */
 		1D3623260D0F684500981E51 /* Thrown_tooAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* Thrown_tooAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		B2D7CA2F0ECEC52D00721DAB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D7CA2E0ECEC52D00721DAB /* OpenGLES.framework */; };
-		B2D7CA310ECEC52D00721DAB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D7CA300ECEC52D00721DAB /* QuartzCore.framework */; };
+		6080CA5A1206FFD100102562 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6080CA591206FFD100102562 /* AudioToolbox.framework */; };
+		6080CA5E1206FFD100102562 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6080CA5D1206FFD100102562 /* Foundation.framework */; };
+		6080CA601206FFD100102562 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6080CA5F1206FFD100102562 /* OpenGLES.framework */; };
+		6080CA621206FFD100102562 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6080CA611206FFD100102562 /* QuartzCore.framework */; };
+		6080CA641206FFD100102562 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6080CA631206FFD100102562 /* UIKit.framework */; };
+		6080CA681206FFE300102562 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6080CA671206FFE300102562 /* CoreGraphics.framework */; };
 		B510E6120F6BB3A900E8CF05 /* XMLLevelLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6110F6BB3A900E8CF05 /* XMLLevelLoader.m */; };
 		B510E6150F6BB3F400E8CF05 /* HUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6140F6BB3F400E8CF05 /* HUDLayer.m */; };
 		B510E6170F6BB3FE00E8CF05 /* Collisions.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6160F6BB3FE00E8CF05 /* Collisions.m */; };
 		B510E6280F6BB50C00E8CF05 /* DebugRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6270F6BB50C00E8CF05 /* DebugRenderer.m */; };
 		B510E62A0F6BB51200E8CF05 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6290F6BB51200E8CF05 /* Helpers.m */; };
-		B510E6510F6BB7CA00E8CF05 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B510E6500F6BB7CA00E8CF05 /* AudioToolbox.framework */; };
 		B510E73C0F6BBF2300E8CF05 /* nextlevel.png in Resources */ = {isa = PBXBuildFile; fileRef = B510E7340F6BBF2300E8CF05 /* nextlevel.png */; };
 		B510E73D0F6BBF2300E8CF05 /* level1.xml in Resources */ = {isa = PBXBuildFile; fileRef = B510E7350F6BBF2300E8CF05 /* level1.xml */; };
 		B510E73E0F6BBF2300E8CF05 /* level2.xml in Resources */ = {isa = PBXBuildFile; fileRef = B510E7360F6BBF2300E8CF05 /* level2.xml */; };
@@ -29,7 +29,6 @@
 		B510E7420F6BBF2300E8CF05 /* level6.xml in Resources */ = {isa = PBXBuildFile; fileRef = B510E73A0F6BBF2300E8CF05 /* level6.xml */; };
 		B510E7430F6BBF2300E8CF05 /* go.png in Resources */ = {isa = PBXBuildFile; fileRef = B510E73B0F6BBF2300E8CF05 /* go.png */; };
 		B510E7450F6BBF2B00E8CF05 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B510E7440F6BBF2B00E8CF05 /* Default.png */; };
-		B510E7470F6BBF3100E8CF05 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B510E7460F6BBF3100E8CF05 /* Icon.png */; };
 		DF49D41E0F50A16A00D8A3BC /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = DF49D41D0F50A16A00D8A3BC /* fps_images.png */; };
 		DFC8EE790F5080BE00CF458A /* chipmunk.c in Sources */ = {isa = PBXBuildFile; fileRef = DFC8EE4A0F5080BE00CF458A /* chipmunk.c */; };
 		DFC8EE7A0F5080BE00CF458A /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = DFC8EE4C0F5080BE00CF458A /* CMakeLists.txt */; };
@@ -96,17 +95,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* Thrown_tooAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thrown_tooAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* Thrown_tooAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thrown_tooAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Thrown too.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thrown too.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Thrown_too_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thrown_too_Prefix.pch; sourceTree = "<group>"; };
+		6080CA591206FFD100102562 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6080CA5D1206FFD100102562 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6080CA5F1206FFD100102562 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6080CA611206FFD100102562 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6080CA631206FFD100102562 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6080CA671206FFE300102562 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2D7CA2E0ECEC52D00721DAB /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		B2D7CA300ECEC52D00721DAB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		B510E6100F6BB3A900E8CF05 /* XMLLevelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLLevelLoader.h; sourceTree = "<group>"; };
 		B510E6110F6BB3A900E8CF05 /* XMLLevelLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLLevelLoader.m; sourceTree = "<group>"; };
 		B510E6130F6BB3F400E8CF05 /* HUDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDLayer.h; sourceTree = "<group>"; };
@@ -115,7 +115,6 @@
 		B510E6180F6BB46400E8CF05 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		B510E6270F6BB50C00E8CF05 /* DebugRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugRenderer.m; sourceTree = "<group>"; };
 		B510E6290F6BB51200E8CF05 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
-		B510E6500F6BB7CA00E8CF05 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B510E7340F6BBF2300E8CF05 /* nextlevel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nextlevel.png; sourceTree = "<group>"; };
 		B510E7350F6BBF2300E8CF05 /* level1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level1.xml; sourceTree = "<group>"; };
 		B510E7360F6BBF2300E8CF05 /* level2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level2.xml; sourceTree = "<group>"; };
@@ -125,7 +124,6 @@
 		B510E73A0F6BBF2300E8CF05 /* level6.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level6.xml; sourceTree = "<group>"; };
 		B510E73B0F6BBF2300E8CF05 /* go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = go.png; sourceTree = "<group>"; };
 		B510E7440F6BBF2B00E8CF05 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		B510E7460F6BBF3100E8CF05 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../thrown/trunk/Resources/Icon.png; sourceTree = SOURCE_ROOT; };
 		DF49D41D0F50A16A00D8A3BC /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
 		DFC8EE4A0F5080BE00CF458A /* chipmunk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = chipmunk.c; sourceTree = "<group>"; };
 		DFC8EE4B0F5080BE00CF458A /* chipmunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chipmunk.h; sourceTree = "<group>"; };
@@ -262,12 +260,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
-				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
-				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
-				B2D7CA2F0ECEC52D00721DAB /* OpenGLES.framework in Frameworks */,
-				B2D7CA310ECEC52D00721DAB /* QuartzCore.framework in Frameworks */,
-				B510E6510F6BB7CA00E8CF05 /* AudioToolbox.framework in Frameworks */,
+				6080CA5A1206FFD100102562 /* AudioToolbox.framework in Frameworks */,
+				6080CA5E1206FFD100102562 /* Foundation.framework in Frameworks */,
+				6080CA601206FFD100102562 /* OpenGLES.framework in Frameworks */,
+				6080CA621206FFD100102562 /* QuartzCore.framework in Frameworks */,
+				6080CA641206FFD100102562 /* UIKit.framework in Frameworks */,
+				6080CA681206FFE300102562 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +322,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				B510E7460F6BBF3100E8CF05 /* Icon.png */,
 				B510E7440F6BBF2B00E8CF05 /* Default.png */,
 				B510E7340F6BBF2300E8CF05 /* nextlevel.png */,
 				B510E7350F6BBF2300E8CF05 /* level1.xml */,
@@ -342,12 +339,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B510E6500F6BB7CA00E8CF05 /* AudioToolbox.framework */,
-				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
-				1D30AB110D05D00D00671497 /* Foundation.framework */,
-				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
-				B2D7CA2E0ECEC52D00721DAB /* OpenGLES.framework */,
-				B2D7CA300ECEC52D00721DAB /* QuartzCore.framework */,
+				6080CA591206FFD100102562 /* AudioToolbox.framework */,
+				6080CA5D1206FFD100102562 /* Foundation.framework */,
+				6080CA5F1206FFD100102562 /* OpenGLES.framework */,
+				6080CA611206FFD100102562 /* QuartzCore.framework */,
+				6080CA631206FFD100102562 /* UIKit.framework */,
+				6080CA671206FFE300102562 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -624,7 +621,6 @@
 				B510E7420F6BBF2300E8CF05 /* level6.xml in Resources */,
 				B510E7430F6BBF2300E8CF05 /* go.png in Resources */,
 				B510E7450F6BBF2B00E8CF05 /* Default.png in Resources */,
-				B510E7470F6BBF3100E8CF05 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,7 +741,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.1;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
@@ -758,7 +754,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphoneos2.1;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Release;
 		};

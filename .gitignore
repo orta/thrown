@@ -5,7 +5,7 @@
 *.perspectivev3
 *.pyc 
 *~.nib/
-weheartradio/build/*
+build/*
 
 # Textmate - if you build your xcode projects with it
 *.tm_build_errors
