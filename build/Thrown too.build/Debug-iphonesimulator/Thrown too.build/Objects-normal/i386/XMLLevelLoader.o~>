@@ -1,5 +1,0 @@
-/Users/ben/spiel/iphone/Thrown too/Classes/XMLLevelLoader.m: In function '-[XMLLevelLoader parser:didStartElement:namespaceURI:qualifiedName:attributes:]':
-/Users/ben/spiel/iphone/Thrown too/Classes/XMLLevelLoader.m:108: warning: no '-setNextLevel:' method found
-/Users/ben/spiel/iphone/Thrown too/Classes/XMLLevelLoader.m:108: warning: (Messages without a matching method signature
-/Users/ben/spiel/iphone/Thrown too/Classes/XMLLevelLoader.m:108: warning: will be assumed to return 'id' and accept
-/Users/ben/spiel/iphone/Thrown too/Classes/XMLLevelLoader.m:108: warning: '...' as arguments.)
