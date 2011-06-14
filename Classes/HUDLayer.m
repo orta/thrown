@@ -21,7 +21,8 @@ extern void * hudLayer;
 	[super init];
 	isTouchEnabled = YES;
   hudLayer = self;
-  NSLog(@"die!");
+  wins = [[Director sharedDirector] winSize];
+
   fireButton = [Sprite spriteWithFile:@"go.png"];
   [fireButton setPosition:cpv(900, 900)];
   [self add:fireButton];
@@ -30,12 +31,16 @@ extern void * hudLayer;
   [nextButton setPosition:cpv(900, 900)];
   [self add:nextButton];
   
+  resetButton = [Sprite spriteWithFile:@"refresh.png"];
+  [resetButton setPosition:cpv( 30, wins.height - 60)];   
+  resetButtonRect = CGRectMake( 30, wins.height - 60, 60, 60);
+  [self add:resetButton];
+  
   throwLabel = [Label labelWithString:@"Throws: 1" dimensions:CGSizeMake(180,40) alignment:UITextAlignmentCenter fontName:@"Helvetica" fontSize:24];
   [throwLabel setRGB:255 :255 :255];
   [self showThrowLabel];
   [self add:throwLabel];
   
-  wins = [[Director sharedDirector] winSize];
   
   return self;
 }
@@ -109,43 +114,43 @@ extern void * hudLayer;
 }
 
 - (void) setThrowLabel:(NSString * ) value{
-  NSLog(@"setThrowLabel %@", value);
   [throwLabel setString:value];  
   [self showThrowLabel];
-
 }
 
 - (void) showThrowLabel{
-  NSLog(@"showhrowLabel");
   [throwLabel setPosition:cpv(60, 300)];
 }
 
 - (void) hideThrowLabel{
-  NSLog(@"hideThrowLabel");
   [throwLabel setPosition:cpv(-60, 300)]; 
 }
 
 - (void) showFireButton{
-  [fireButton setPosition:cpv(wins.width -30, wins.height-30)];   
+  [fireButton setPosition:cpv(wins.width -60, wins.height-60)];   
   fireButtonRect = CGRectMake(wins.width -60, wins.height-60, 60, 60);
   [self updateGameWithNewMenuRect];
 }
 
 - (void) hideFireButton{
-  [fireButton setPosition:cpv(wins.width +90, wins.height+30)];   
+  [fireButton setPosition:cpv(wins.width +100, wins.height+100)];   
   fireButtonRect = CGRectMake(0,0, 0, 0);
   [self updateGameWithNewMenuRect];
 }
 
 - (void) showNextButton{
-  [nextButton setPosition:cpv(wins.width -90, wins.height-30)];   
-  nextButtonRect = CGRectMake(wins.width -120, wins.height-60, 60, 60);
+  [nextButton setPosition:cpv(wins.width -150, wins.height-60)];   
+  nextButtonRect = CGRectMake(wins.width -150, wins.height-60, 60, 60);
   [self updateGameWithNewMenuRect];
 }
 
 - (void) hideNextButton{
   [nextButton setPosition:cpv(wins.width +90, wins.height+30)];   
   nextButtonRect = CGRectMake(0,0, 0, 0);
+  [self updateGameWithNewMenuRect];
+}
+
+- (void) showResetButton {
   [self updateGameWithNewMenuRect];
 }
 
@@ -160,6 +165,9 @@ extern void * hudLayer;
   for (UITouch *myTouch in touches) { 
     CGPoint location = [myTouch locationInView: [myTouch view]];
     location = [[Director sharedDirector] convertCoordinate: location];
+    if(CGRectContainsPoint(resetButtonRect, location)){
+      [game reloadLevel];
+    }
     if(gameMode == kGame_Aiming || gameMode == kGame_Rest){
       if(CGRectContainsPoint(fireButtonRect, location)){
         [game fire];  

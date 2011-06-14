@@ -22,7 +22,6 @@
   UIScrollView * myScrollView;
   
   cpBody * player;
-  cpVect centerPoint;
   cpVect arrowPoint;
   
   bool showArrow;
@@ -38,6 +37,7 @@
 @property (nonatomic, retain) NSURL* currentLevelURL;
 
 -(void) gotoNextLevel;
+-(void) reloadLevel;
 -(void) playerStationaryCheck: (ccTime) delta;
 -(void) step: (ccTime) dt;
 -(void) setPsuedoBackground: (NSURL *) url;

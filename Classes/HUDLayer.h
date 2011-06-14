@@ -17,10 +17,14 @@
   
   GameLayer *game;
   CGSize wins;
+
   Sprite * fireButton;
   CGRect fireButtonRect;
   Sprite * nextButton;
   CGRect nextButtonRect;
+  Sprite * resetButton;
+  CGRect resetButtonRect;
+
   Label * throwLabel;
   int currentPercentage;
   

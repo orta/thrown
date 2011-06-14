@@ -15,6 +15,7 @@
 		6080CA621206FFD100102562 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6080CA611206FFD100102562 /* QuartzCore.framework */; };
 		6080CA641206FFD100102562 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6080CA631206FFD100102562 /* UIKit.framework */; };
 		6080CA681206FFE300102562 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6080CA671206FFE300102562 /* CoreGraphics.framework */; };
+		608E4F7513A7742A00A0EBCA /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 608E4F7413A7742A00A0EBCA /* refresh.png */; };
 		B510E6120F6BB3A900E8CF05 /* XMLLevelLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6110F6BB3A900E8CF05 /* XMLLevelLoader.m */; };
 		B510E6150F6BB3F400E8CF05 /* HUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6140F6BB3F400E8CF05 /* HUDLayer.m */; };
 		B510E6170F6BB3FE00E8CF05 /* Collisions.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6160F6BB3FE00E8CF05 /* Collisions.m */; };
@@ -106,6 +107,7 @@
 		6080CA611206FFD100102562 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6080CA631206FFD100102562 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6080CA671206FFE300102562 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		608E4F7413A7742A00A0EBCA /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B510E6100F6BB3A900E8CF05 /* XMLLevelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLLevelLoader.h; sourceTree = "<group>"; };
 		B510E6110F6BB3A900E8CF05 /* XMLLevelLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLLevelLoader.m; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				608E4F7413A7742A00A0EBCA /* refresh.png */,
 				B510E7440F6BBF2B00E8CF05 /* Default.png */,
 				B510E7340F6BBF2300E8CF05 /* nextlevel.png */,
 				B510E7350F6BBF2300E8CF05 /* level1.xml */,
@@ -595,7 +598,14 @@
 			isa = PBXProject;
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Thrown too" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -621,6 +631,7 @@
 				B510E7420F6BBF2300E8CF05 /* level6.xml in Resources */,
 				B510E7430F6BBF2300E8CF05 /* go.png in Resources */,
 				B510E7450F6BBF2B00E8CF05 /* Default.png in Resources */,
+				608E4F7513A7742A00A0EBCA /* refresh.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,7 +726,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Thrown_too_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Thrown too";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -727,7 +741,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Thrown_too_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "Thrown too";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

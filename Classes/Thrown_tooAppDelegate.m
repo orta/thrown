@@ -96,7 +96,6 @@ static void eachShape(void *ptr, void* unused){
   gameMode = kGame_Rest;
   firstRun = true;
   ignoreInputRect = CGRectMake(0, 0, 0, 0);
-  centerPoint = cpv(160, 240);
   
   srand([[NSDate date] timeIntervalSince1970]);
   
@@ -131,7 +130,7 @@ static void eachShape(void *ptr, void* unused){
         
         if(numberOfThrows == 0){   
           if(lives == 0){
-            [self loadLevelAtURL:currentLevelURL];
+            [self reloadLevel];
             return;
           }
           numberOfThrows = totalNumberOfThrows;
@@ -148,6 +147,10 @@ static void eachShape(void *ptr, void* unused){
     }
   }
   oldChestP = chest->p;
+}
+
+- (void) reloadLevel {
+  [self loadLevelAtURL:currentLevelURL];
 }
 
 -(void) loadLevelAtURL:(NSURL*) url {
@@ -371,10 +374,6 @@ static void eachShape(void *ptr, void* unused){
   NSLog(@"TODO... maybe");  
 }
 
-
-
-
-
 -(void) dealloc
 {
 	[super dealloc];
@@ -392,13 +391,11 @@ static void eachShape(void *ptr, void* unused){
 
 	[[Director sharedDirector] setLandscape: YES];
 	[[Director sharedDirector] setDisplayFPS:YES];
-
 	[[Director sharedDirector] attachInWindow:window];
-
-  
   
   
 	Scene *scene = [Scene node];
+  [scene setPosition:cpv(-530, 20)];
   HUDLayer *hud = [HUDLayer node];  
   GameLayer *game = [GameLayer node];
   [game setHud:hud];
