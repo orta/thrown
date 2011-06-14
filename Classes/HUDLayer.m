@@ -51,7 +51,6 @@ extern void * hudLayer;
   [throwLabel setPosition:cpv(999,999)];
   [nextButton setPosition:cpv(999,999)];
   nextButtonRect = CGRectMake(0, 0, 0, 0);
-  [game setMenuRect:CGRectMake(0, 0, 0, 0)];
 }
 
 - (void) setLevelComplete: (int) value{
@@ -99,20 +98,6 @@ extern void * hudLayer;
   }
 }
 
-- (void) updateGameWithNewMenuRect{
-  //Beware, the positioning of the rects means at CGRect Union may not give expected results
-  // the != 0 should fix this
-
-  CGRect newRect = CGRectMake(wins.width, wins.height, 0, 0);
-  if(fireButtonRect.size.width != 0){
-    newRect = CGRectUnion(newRect, fireButtonRect);
-  }
-  if(nextButtonRect.size.width != 0){
-    newRect = CGRectUnion(newRect, nextButtonRect);
-  }
-  [game setMenuRect:newRect];
-}
-
 - (void) setThrowLabel:(NSString * ) value{
   [throwLabel setString:value];  
   [self showThrowLabel];
@@ -129,29 +114,21 @@ extern void * hudLayer;
 - (void) showFireButton{
   [fireButton setPosition:cpv(wins.width -60, wins.height-60)];   
   fireButtonRect = CGRectMake(wins.width -60, wins.height-60, 60, 60);
-  [self updateGameWithNewMenuRect];
 }
 
 - (void) hideFireButton{
   [fireButton setPosition:cpv(wins.width +100, wins.height+100)];   
   fireButtonRect = CGRectMake(0,0, 0, 0);
-  [self updateGameWithNewMenuRect];
 }
 
 - (void) showNextButton{
   [nextButton setPosition:cpv(wins.width -150, wins.height-60)];   
   nextButtonRect = CGRectMake(wins.width -150, wins.height-60, 60, 60);
-  [self updateGameWithNewMenuRect];
 }
 
 - (void) hideNextButton{
   [nextButton setPosition:cpv(wins.width +90, wins.height+30)];   
   nextButtonRect = CGRectMake(0,0, 0, 0);
-  [self updateGameWithNewMenuRect];
-}
-
-- (void) showResetButton {
-  [self updateGameWithNewMenuRect];
 }
 
 - (void)ccTouchesMoved:(NSSet*)touches withEvent:(UIEvent*)event{

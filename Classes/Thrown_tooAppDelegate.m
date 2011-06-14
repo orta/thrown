@@ -89,20 +89,20 @@ static void eachShape(void *ptr, void* unused){
 {
 	[super init];
 
-  
 	isTouchEnabled = YES;
 	isAccelerometerEnabled = YES;
 	gameLayer = self;
   gameMode = kGame_Rest;
   firstRun = true;
-  ignoreInputRect = CGRectMake(0, 0, 0, 0);
+  CGSize wins = [[Director sharedDirector] winSize];
+  ignoreInputRect = CGRectMake(0, wins.height -90 , wins.width, 90);
   
   srand([[NSDate date] timeIntervalSince1970]);
   
 	cpInitChipmunk();	
   
   NSBundle*	bundle = [NSBundle mainBundle];
-  [self loadLevelAtURL:[NSURL fileURLWithPath: [bundle pathForResource:@"level1" ofType:@"xml"]]];
+  [self loadLevelAtURL:[NSURL fileURLWithPath: [bundle pathForResource:@"level7" ofType:@"xml"]]];
   [self schedule: @selector(step:)];
   return self;
 }
@@ -116,7 +116,6 @@ static void eachShape(void *ptr, void* unused){
       finishCount++;
       if(finishCount==5){
         if(exitCount > 500){
-          NSLog(@"WINNAR");
           [hud showNextButton];
           gameMode = kGame_Rest;
         }
@@ -256,15 +255,6 @@ static void eachShape(void *ptr, void* unused){
 #endif
 }  
 
-//-(void) onEnter {
-//	[super onEnter];
-//	[[UIAccelerometer sharedAccelerometer] setUpdateInterval:(1.0 / 60)];
-//}
-
--(void) setMenuRect: (CGRect) rect{
-  ignoreInputRect = rect;
-}
-
 
 -(void) step: (ccTime) delta {
 	int steps = 2;
@@ -299,7 +289,6 @@ static void eachShape(void *ptr, void* unused){
   }
   
   for (myTouch in touches) {   
-    
     location = [[Director sharedDirector] convertCoordinate: location];
     if(CGRectContainsPoint(ignoreInputRect, location)){
       break;
@@ -390,12 +379,13 @@ static void eachShape(void *ptr, void* unused){
 	//[window setMultipleTouchEnabled:YES];
 
 	[[Director sharedDirector] setLandscape: YES];
-	[[Director sharedDirector] setDisplayFPS:YES];
 	[[Director sharedDirector] attachInWindow:window];
   
   
 	Scene *scene = [Scene node];
-  [scene setPosition:cpv(-530, 20)];
+  
+  //  these numbers are magick?!
+  [scene setPosition:cpv(-542, 2)];
   HUDLayer *hud = [HUDLayer node];  
   GameLayer *game = [GameLayer node];
   [game setHud:hud];

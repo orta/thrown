@@ -68,6 +68,13 @@ extern cpVect mapSize;
     float y2 = [[attributeDict valueForKey:@"y2"] floatValue];
     make_scenery_line(x1, y1, x2, y2, kColl_Scenery);
     
+  } else if ([elementName isEqualToString:@"rect"]) {
+    float x = [[attributeDict valueForKey:@"x"] floatValue];
+    float y = [[attributeDict valueForKey:@"y"] floatValue];
+    float width = [[attributeDict valueForKey:@"width"] floatValue];
+    float height = [[attributeDict valueForKey:@"height"] floatValue];
+    make_scenery_box(x,y,width,height);
+    
   }else if([elementName isEqualToString:@"circle"]) {
     float x = [[attributeDict valueForKey:@"x"] floatValue];
     float y = [[attributeDict valueForKey:@"y"] floatValue];
@@ -104,7 +111,6 @@ extern cpVect mapSize;
     
   }else if([elementName isEqualToString:@"next"]) {
     NSString *level = [attributeDict valueForKey:@"level"];
-    // TODO
     [game setNextLevel: level];
     
   }else if([elementName isEqualToString:@"size"]) {

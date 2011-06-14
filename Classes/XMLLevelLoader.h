@@ -11,7 +11,7 @@
 
 @class GameLayer;
 
-@interface XMLLevelLoader : NSObject {
+@interface XMLLevelLoader : NSObject <NSXMLParserDelegate> {
   GameLayer * game;
 }
 - (void) parseXMLFileAtURL:(NSURL *)URL parseError:(NSError **)error ;
