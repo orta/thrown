@@ -61,20 +61,29 @@ extern void * hudLayer;
     return;
   }
   
-  #define progress_offset_x 120
-  #define progress_offset_y 20
-  // 0,0 is bottom right
-  // 320,0 is bottom left
-  drawLine(20, 461, 20, 359);
-  drawLine(20, 359, 40, 359);
-  drawLine(40, 461, 40, 359);
-  drawLine(20, 461, 40, 461);
+  //dear 23YO orta. LESS HARDCODING SHIT
+    
+  // not even a joke, this actually is y - 2010
+  #define progress_offset_x 710 
+  
+  // and it seems the higher this is the more leftwards it goes..
+  #define progress_offset_y 460
+  
+  #define thumb_width 25
+  #define thumb_height 30
+  #define thumb_xoffset 780
+  #define thumb_yoffset 728
+
+  // this shit is all inverted.
+  
+  // ergo 0,0 is bottom right,
+  // and 320,0 is bottom left
+  drawLine(progress_offset_x + 20, progress_offset_y + 461, progress_offset_x + 20, progress_offset_y + 359);
+  drawLine(progress_offset_x + 20, progress_offset_y + 359, progress_offset_x + 40, progress_offset_y + 359);
+  drawLine(progress_offset_x + 40, progress_offset_y + 461, progress_offset_x + 40, progress_offset_y + 359);
+  drawLine(progress_offset_x + 20, progress_offset_y + 461, progress_offset_x + 40, progress_offset_y + 461);
   
   if(percentage == 11){
-    #define thumb_width 25
-    #define thumb_height 30
-    #define thumb_xoffset 20
-    #define thumb_yoffset 20
         
     //  y x, y2 x2 (after rotation)
     drawLine(thumb_yoffset, thumb_xoffset, thumb_yoffset, thumb_xoffset+thumb_width);
@@ -92,12 +101,12 @@ extern void * hudLayer;
   
   
   for (int i = 0; i < percentage; i++) {
-    int xoff =  451 - i*10;
+    int xoff =  progress_offset_y + 451 - i*10;
     int width = 8;
-    drawLine(22, xoff, 22, xoff+width);
-    drawLine(38, xoff+width, 22, xoff+width);
-    drawLine(38, xoff+width, 38, xoff);
-    drawLine(38, xoff, 22, xoff);
+    drawLine(progress_offset_x + 22, xoff, progress_offset_x + 22, xoff+width);
+    drawLine(progress_offset_x + 38, xoff+width, progress_offset_x +22, xoff+width);
+    drawLine(progress_offset_x + 38, xoff+width, progress_offset_x + 38, xoff);
+    drawLine(progress_offset_x + 38, xoff,  progress_offset_x + 22, xoff);
   }
 }
 
