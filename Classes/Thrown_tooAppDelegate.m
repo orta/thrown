@@ -341,30 +341,7 @@ static void eachShape(void *ptr, void* unused){
   [self schedule: @selector(playerStationaryCheck:) interval: 1];
 }
 
-
-- (void)accelerometer:(UIAccelerometer*)accelerometer didAccelerate:(UIAcceleration*)acceleration{	
-  static float prevX=0, prevY=0;	
-#define kFilterFactor 0.05
-  
-  float accelX = acceleration.x * kFilterFactor + (1- kFilterFactor)*prevX;
-  float accelY = acceleration.y * kFilterFactor + (1- kFilterFactor)*prevY;
-  
-  prevX = accelX;
-  prevY = accelY;
-  
-  cpVect v = cpv( accelX, accelY);
-  
-  v = cpvrotate(v, cpv(0,1));
-  [[hud fireButton] setRotation: RADIANS_TO_DEGREES( cpvtoangle(v)) + 180];
-  // 	space->gravity = cpvmult(v, 200);
-}
-
--(void)setPsuedoBackground: (NSURL *) url{
-  NSLog(@"TODO... maybe");  
-}
-
--(void) dealloc
-{
+-(void) dealloc {
 	[super dealloc];
 }
 @end

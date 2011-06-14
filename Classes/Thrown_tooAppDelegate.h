@@ -40,15 +40,12 @@
 -(void) reloadLevel;
 -(void) playerStationaryCheck: (ccTime) delta;
 -(void) step: (ccTime) dt;
--(void) setPsuedoBackground: (NSURL *) url;
 -(void) loadLevelAtURL:(NSURL*) url;
 -(void) fire;
--(void) setMenuRect: (CGRect) rect;
 @end
 
 
-@interface Thrown_tooAppDelegate : NSObject <UIAccelerometerDelegate, UIAlertViewDelegate, UITextFieldDelegate, UIApplicationDelegate>
-{
+@interface Thrown_tooAppDelegate : NSObject <UIAccelerometerDelegate, UIAlertViewDelegate, UITextFieldDelegate, UIApplicationDelegate> {
 	UIWindow *window;
 }
 @end

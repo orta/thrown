@@ -32,8 +32,8 @@ extern void * hudLayer;
   [self add:nextButton];
   
   resetButton = [Sprite spriteWithFile:@"refresh.png"];
-  [resetButton setPosition:cpv( 30, wins.height - 60)];   
-  resetButtonRect = CGRectMake( 30, wins.height - 60, 60, 60);
+  [resetButton setPosition:cpv( 30, wins.height - 30)];   
+  resetButtonRect = CGRectMake( 30, wins.height - 30, 60, 60);
   [self add:resetButton];
   
   throwLabel = [Label labelWithString:@"Throws: 1" dimensions:CGSizeMake(180,40) alignment:UITextAlignmentCenter fontName:@"Helvetica" fontSize:24];
@@ -112,7 +112,7 @@ extern void * hudLayer;
 }
 
 - (void) showFireButton{
-  [fireButton setPosition:cpv(wins.width -60, wins.height-60)];   
+  [fireButton setPosition:cpv(wins.width -30, wins.height-30)];   
   fireButtonRect = CGRectMake(wins.width -60, wins.height-60, 60, 60);
 }
 
@@ -122,8 +122,8 @@ extern void * hudLayer;
 }
 
 - (void) showNextButton{
-  [nextButton setPosition:cpv(wins.width -150, wins.height-60)];   
-  nextButtonRect = CGRectMake(wins.width -150, wins.height-60, 60, 60);
+  [nextButton setPosition:cpv(wins.width -130, wins.height-30)];   
+  nextButtonRect = CGRectMake(wins.width -180, wins.height-60, 60, 60);
 }
 
 - (void) hideNextButton{
