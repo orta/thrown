@@ -11,6 +11,7 @@
 #import "Globals.h"
 
 extern void make_scenery_line(cpFloat x, cpFloat y, cpFloat x2, cpFloat y2, uint type);
+extern void make_scenery_slipperyline(cpFloat x, cpFloat y, cpFloat x2, cpFloat y2, uint type);
 extern void make_cpv_scenery_line(cpVect v1, cpVect v2);
 extern void make_scenery_box(cpFloat x, cpFloat y, cpFloat width, cpFloat height );
 extern void make_scenery_circle(cpFloat x, cpFloat y, cpFloat radius );
@@ -68,6 +69,13 @@ extern cpVect mapSize;
     float y2 = [[attributeDict valueForKey:@"y2"] floatValue];
     make_scenery_line(x1, y1, x2, y2, kColl_Scenery);
     
+  }else if ([elementName isEqualToString:@"slipperyline"]) {
+      float x1 = [[attributeDict valueForKey:@"x1"] floatValue];
+      float y1 = [[attributeDict valueForKey:@"y1"] floatValue];
+      float x2 = [[attributeDict valueForKey:@"x2"] floatValue];
+      float y2 = [[attributeDict valueForKey:@"y2"] floatValue];
+      make_scenery_slipperyline(x1, y1, x2, y2, kColl_Slippy);
+
   } else if ([elementName isEqualToString:@"rect"]) {
     float x = [[attributeDict valueForKey:@"x"] floatValue];
     float y = [[attributeDict valueForKey:@"y"] floatValue];

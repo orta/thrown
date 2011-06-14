@@ -66,6 +66,9 @@ void drawObject(void *ptr, void *unused) {
     case kColl_Exit:
       glColor4f(0.2, 0.6, 0.4, 1.0);
       break;
+    case kColl_Slippy:
+      glColor4f(0.5, 0.5, 0.9, 1.0);
+      break;
     default:
       glColor4f(1.0, 1.0, 1.0, 0.7);
       break;

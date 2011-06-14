@@ -60,11 +60,19 @@ void make_scenery_line(cpFloat x, cpFloat y, cpFloat x2, cpFloat y2, uint type){
 	cpSpaceAddStaticShape(space, shape);
 }
 
+void make_scenery_slipperyline(cpFloat x, cpFloat y, cpFloat x2, cpFloat y2, uint type){
+  cpShape *shape;
+  shape = cpSegmentShapeNew(staticBody, cpv(x,y), cpv(x2, y2), 0.0f);
+	shape->e = 0.7; shape->u = 0.2;
+  shape -> collision_type = type;
+	cpSpaceAddStaticShape(space, shape);
+}
+
 void make_cpv_scenery_line(cpVect v1, cpVect v2){
   cpShape *shape;
   shape = cpSegmentShapeNew(staticBody, v1, v2, 0.0f);
 	shape->e = 1.0; shape->u = 1.0;
-  shape -> collision_type = kColl_Scenery;
+  shape -> collision_type = kColl_Slippy;
 	cpSpaceAddStaticShape(space, shape);
 }
 
@@ -235,7 +243,7 @@ void move_player( cpVect point){
 void bleed(){
   // randomly creates a blood circle
   
-  cpFloat radius = (rand() % 2) + 1;
+  cpFloat radius = (rand() % 4) + 1;
   cpBody *dropletBody = cpBodyNew(1, cpMomentForCircle(1, 0.0, radius, cpvzero));
 	dropletBody->p = chest->p;
 	cpSpaceAddBody(space, dropletBody);

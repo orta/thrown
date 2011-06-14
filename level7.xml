@@ -2,23 +2,34 @@
 
   <!-- important details -->
   <background file="default"/>
-  <player x="140" y="270"/> 
-  <exit x="220" y="40" width="120" height="2"/>
+  <player x="75" y="140"/> 
+<!--  <exit x="800" y="90" width="200" height="10"/> -->
+  <exit x="50" y="110" width="200" height="10"/>
+
   <size width="1020" height="764"/>
-  <next level="level1"/>
+  <next level="level8"/>
 
   <!-- actual map -->
-  <line x1="0" y1="250" x2="150" y2="250"/>
-  <line x1="150" y1="250" x2="150" y2="0"/>
-  
-  <!-- cliff -->
-  <line x1="361" y1="200" x2="410" y2="360"/>
+  <rect x="50" y="100" width="60" height="4"/>
 
   <!-- spikes -->
-  <spikes direction="up" x="150" y="0" width="50" height="5"/>
-  <spikes direction="right" x="201" y="0" width="10" height="200"/>
-  <spikes direction="left" x="350" y="0" width="10" height="200"/>
-  <line x1="200" y1="0" x2="200" y2="200"/>
-  <line x1="361" y1="0" x2="361" y2="200"/>
+  <spikes direction="left" x="350" y="0" width="10" height="595"/>
+  <spikes direction="top" x="0" y="10" width="350" height="10"/>
+
+  <!-- top of cave -->
+  <slipperyline x1="350" y1="750" x2="900" y2="550"/>
+  <slipperyline x1="350" y1="600" x2="850" y2="450"/>
+  
+  <!-- corner connectors -->
+  <slipperyline x1="900" y1="550" x2="1000" y2="450"/>
+  <slipperyline x1="1000" y1="450" x2="900" y2="350"/>
+
+  <!-- 2nd downhill -->
+  <slipperyline x1="850" y1="450" x2="400" y2="250"/>
+  <slipperyline x1="900" y1="350" x2="550" y2="250"/>
+  
+  <!-- final downhill -->
+  <slipperyline x1="400" y1="250" x2="800" y2="100"/>
+  <slipperyline x1="550" y1="250" x2="1000" y2="100"/>
 
 </thrown>

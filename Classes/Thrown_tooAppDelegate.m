@@ -266,7 +266,7 @@ static void eachShape(void *ptr, void* unused){
 	cpSpaceHashEach(space->activeShapes, &eachShape, nil);
 	cpSpaceHashEach(space->staticShapes, &eachShape, nil);
   if(gameMode == kGame_Spiked){
-    if((rand() % 3) == 1){
+    if((rand() % 2) == 1){
       bleed();
     }
   }

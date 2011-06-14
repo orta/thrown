@@ -1,11 +1,10 @@
 <thrown map="level 6" author="orta" throws="1">
-
   <!-- important details -->
   <background file="default"/>
   <player x="140" y="270"/> 
   <exit x="220" y="40" width="120" height="2"/>
   <size width="480" height="320"/>
-  <next level="level6"/>
+  <next level="level7"/>
 
   <!-- actual map -->
   <line x1="0" y1="250" x2="150" y2="250"/>
@@ -20,6 +19,4 @@
   <spikes direction="left" x="350" y="0" width="10" height="200"/>
   <line x1="200" y1="0" x2="200" y2="200"/>
   <line x1="361" y1="0" x2="361" y2="200"/>
-
-
 </thrown>

@@ -60,6 +60,9 @@ extern void * hudLayer;
   if(percentage == currentPercentage){
     return;
   }
+  
+  #define progress_offset_x 120
+  #define progress_offset_y 20
   // 0,0 is bottom right
   // 320,0 is bottom left
   drawLine(20, 461, 20, 359);
@@ -70,7 +73,7 @@ extern void * hudLayer;
   if(percentage == 11){
     #define thumb_width 25
     #define thumb_height 30
-    #define thumb_xoffset 320
+    #define thumb_xoffset 20
     #define thumb_yoffset 20
         
     //  y x, y2 x2 (after rotation)

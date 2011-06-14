@@ -14,6 +14,7 @@ enum CollisionTypes {
   kColl_Exit,
   kColl_Spikes,
   kColl_Blood,
+  kColl_Slippy,
   kColl_Count
 };
 

@@ -17,6 +17,7 @@
 		6080CA681206FFE300102562 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6080CA671206FFE300102562 /* CoreGraphics.framework */; };
 		608E4F7513A7742A00A0EBCA /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 608E4F7413A7742A00A0EBCA /* refresh.png */; };
 		608E4F7713A7791600A0EBCA /* level7.xml in Resources */ = {isa = PBXBuildFile; fileRef = 608E4F7613A7791600A0EBCA /* level7.xml */; };
+		608E4F7D13A7A3BE00A0EBCA /* level8.xml in Resources */ = {isa = PBXBuildFile; fileRef = 608E4F7C13A7A3BE00A0EBCA /* level8.xml */; };
 		B510E6120F6BB3A900E8CF05 /* XMLLevelLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6110F6BB3A900E8CF05 /* XMLLevelLoader.m */; };
 		B510E6150F6BB3F400E8CF05 /* HUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6140F6BB3F400E8CF05 /* HUDLayer.m */; };
 		B510E6170F6BB3FE00E8CF05 /* Collisions.m in Sources */ = {isa = PBXBuildFile; fileRef = B510E6160F6BB3FE00E8CF05 /* Collisions.m */; };
@@ -110,6 +111,7 @@
 		6080CA671206FFE300102562 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		608E4F7413A7742A00A0EBCA /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		608E4F7613A7791600A0EBCA /* level7.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level7.xml; sourceTree = "<group>"; };
+		608E4F7C13A7A3BE00A0EBCA /* level8.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = level8.xml; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B510E6100F6BB3A900E8CF05 /* XMLLevelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLLevelLoader.h; sourceTree = "<group>"; };
 		B510E6110F6BB3A900E8CF05 /* XMLLevelLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLLevelLoader.m; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				B510E7390F6BBF2300E8CF05 /* level5.xml */,
 				B510E73A0F6BBF2300E8CF05 /* level6.xml */,
 				608E4F7613A7791600A0EBCA /* level7.xml */,
+				608E4F7C13A7A3BE00A0EBCA /* level8.xml */,
 				B510E73B0F6BBF2300E8CF05 /* go.png */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 			);
@@ -639,6 +642,7 @@
 				B510E7450F6BBF2B00E8CF05 /* Default.png in Resources */,
 				608E4F7513A7742A00A0EBCA /* refresh.png in Resources */,
 				608E4F7713A7791600A0EBCA /* level7.xml in Resources */,
+				608E4F7D13A7A3BE00A0EBCA /* level8.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
