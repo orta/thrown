@@ -1,35 +1,26 @@
-<thrown map="level 7" author="orta" throws="1">
-
+<thrown map="level 8" author="orta" throws="2">
   <!-- important details -->
   <background file="default"/>
-  <player x="75" y="140"/> 
-  <exit x="800" y="90" width="200" height="10"/>
+  <player x="250" y="500"/> 
   <size width="1020" height="764"/>
-  <next level="level8"/>
+  <next level="level1"/>
 
-  <!-- actual map -->
-  <rect x="50" y="100" width="60" height="4"/>
-
-  <!-- spikes -->
-  <spikes direction="left" x="350" y="0" width="10" height="595"/>
-  <spikes direction="top" x="0" y="10" width="350" height="10"/>
-
-  <!-- top of cave -->
-  <line x1="350" y1="750" x2="900" y2="550"/>
-  <line x1="350" y1="600" x2="850" y2="450"/>
+  <!-- wrap level  -->
+  <spikes direction="left" x="0" y="0" width="10" height="764"/>
+  <spikes direction="up" x="0" y="0" width="1020" height="10"/>
+  <spikes direction="right" x="1020" y="0" width="-10" height="764"/>
+  <spikes direction="up" x="0" y="764" width="1020" height="-10"/>
   
-  <!-- corner connectors -->
-  <line x1="900" y1="550" x2="1000" y2="450"/>
-  <line x1="1000" y1="450" x2="900" y2="350"/>
+  <!-- centre spikes -->
+  <spikes direction="left" x="500" y="0" width="10" height="200"/>
+  <spikes direction="left" x="500" y="350" width="10" height="100"/>
+  <spikes direction="left" x="500" y="600" width="10" height="150"/>
 
-  <!-- 2nd downhill -->
-  <line x1="850" y1="450" x2="400" y2="250"/>
-  <line x1="900" y1="350" x2="550" y2="250"/>
+  <line x1="200" y1="350" x2="350" y2="350"/>
   
-  <!-- final downhill -->
-  <line x1="400" y1="250" x2="800" y2="100"/>
-  <line x1="550" y1="250" x2="1000" y2="100"/>
-
-
+  <slipperyline x1="750" y1="100" x2="900" y2="100"/>
+  <line x1="900" y1="100" x2="950" y2="150"/>
+  
+  <exit x="200" y="90" width="150" height="10"/>
 
 </thrown>

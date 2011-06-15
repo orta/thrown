@@ -33,7 +33,7 @@ extern void * hudLayer;
   
   resetButton = [Sprite spriteWithFile:@"refresh.png"];
   [resetButton setPosition:cpv( 30, wins.height - 30)];   
-  resetButtonRect = CGRectMake( 30, wins.height - 30, 60, 60);
+  resetButtonRect = CGRectMake( 0, wins.height - 120, 120, 120);
   [self add:resetButton];
   
   throwLabel = [Label labelWithString:@"Throws: 1" dimensions:CGSizeMake(180,40) alignment:UITextAlignmentCenter fontName:@"Helvetica" fontSize:24];
@@ -72,7 +72,7 @@ extern void * hudLayer;
   #define thumb_width 25
   #define thumb_height 30
   #define thumb_xoffset 780
-  #define thumb_yoffset 728
+  #define thumb_yoffset 729
 
   // this shit is all inverted.
   
